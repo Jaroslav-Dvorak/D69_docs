@@ -1,0 +1,21 @@
+mqtt:
+  sensor:
+    - name: "voltage"
+      state_topic: "D69"
+      unit_of_measurement: "V"
+      value_template: "{{ value_json.voltage }}"
+      
+    - name: "current"
+      state_topic: "D69"
+      unit_of_measurement: "A"
+      value_template: "{{ value_json.current }}"
+      
+    - name: "power"
+      state_topic: "D69"
+      unit_of_measurement: "W"
+      value_template: "{{ value_json.power }}"
+      
+    - name: "energy"
+      state_topic: "D69"
+      unit_of_measurement: "kWh"
+      value_template: "{{ value_json.energy }}"
