@@ -1,11 +1,11 @@
 
-site = "imatch"         # musí být stejné jako název stránky
+site = "xxxxxx"         # musí být stejné jako název stránky
 title = "D69-bojler"    # text v kartě prohlížeče
-db_table = "NEWD69"
+db_table = "D69"
 
 host = f"{site}.mysql.pythonanywhere-services.com"
 user = f"{site}"
-passwd = "ab53ec52da"
+passwd = "xxxxxxxxxx"
 db = f"{site}$default"
 
 max_power = 3000    # maximální výkon

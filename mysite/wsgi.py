@@ -7,8 +7,10 @@
 
 import sys
 
+site = '...' 
+
 # add your project directory to the sys.path
-project_home = '/home/imatch/mysite'
+project_home = f'/home/{site}/mysite'
 if project_home not in sys.path:
     sys.path = [project_home] + sys.path
 
