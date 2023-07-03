@@ -28,6 +28,8 @@ class Data:
         self._voltage = []
         self._current = []
 
+        self.zeroed_at = 0.0
+
         try:
             self.df_energy_daily = self.get_energy_daily()
             self.df_energy_weekly = self.get_energy_weekly()
@@ -42,7 +44,7 @@ class Data:
         try:
             self.timestamp = msg["timestamp"]
             self.power = msg["power"]
-            self.energy = msg["energy"]
+            self.energy = msg["energy"] + self.zeroed_at
             self.voltage = msg["voltage"]
             self.current = msg["current"]
         except Exception as e:
