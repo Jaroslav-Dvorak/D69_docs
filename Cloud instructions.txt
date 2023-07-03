@@ -1,0 +1,44 @@
+Video návod: https://youtu.be/CQ8HAoJkLQ4
+
+- vytvořit účet na www.pythonanywhere.com
+- potvrdit email
+- Open Web tab--> Add a new app --> Flask --> Python 3.10
+- Zapamatovat/zapsat název stránky
+- Dashboard --> files --> mysite --> popelnice u flask_app.py
+- https://github.com/Jaroslav-Dvorak/D69_docs --> Code --> Download ZIP
+- rozbalit soubor a vyuploadovat .py soubory na pythonanywhere do složky mysite
+- otevřít na pythonanywhere soubor wsgi a zkopírovat obsah do schránky
+- Dashboard --> Web apps --> WSGI configuration file --> vložit
+--> vyplnit název stránky místo ... --> Save
+- Dashboard --> Files --> Credintials.py --> vyplnit site --> Save
+- Dashboard --> Databases --> vytvořit heslo k databázi
+- Files --> mysite --> Credintials --> vyplnit heslo databáze
+- Dashboard --> $Bash
+- pip install dash_bootstrap_components
+- pip install dash_daq
+- exit
+- Dashboard --> Open Web tab --> Reload... (zelený)
+- Vyzkouším, jestli stránka funguje
+
+- vytvořit účet na https://flespi.com/ --> GET STARTED
+- Tokens --> (+) --> MQTT/REST... --> odkliknout TTL --> zakliknout Expire
+- vybrat datum včera +10let --> popelnice --> ADD ACL --> mqtt --> Topic=#
+- actions=publish, subscribe --> Save
+- Zkopírovat token do schránky (symbol kopírování)
+- Channels --> (+) --> Vymyslím název do Name --> Protocol id=mqtt
+- Token=vložím token ze schránky --> Client ID=(Vymyslím) --> Topic=(Vymyslím) --> Save
+- otevřít právě vytvořený Channel --> Vybrat Without TTL --> Device identification=(Vymyslím) --> Save
+- Streams --> Name=(Vymyslím) --> Protocol id=http --> Uri=Vložit naši adresu -->
+- upravit adresu (....com:80/data) --> Save
+- otevřít právě vytvořený stream --> Queue with realtime delivery only --> Channels --> vybrat náš kanál
+
+- Stánout program putty a nainstalovat https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi
+- Pravým na Start --> správce zařízení --> Ports (COM & LPT) --> připojit měřák a zapamatovat číslo COM
+- Spustit Putty --> Serial --> vyplnit číslo COM --> Terminal --> Zaškrnout Implicit CR + LF + 2xForce ON --> Open
+- Vyplnit název Wifi, Heslo Wifi, ClientId=(vymyslím), User=(zkopírovat token), Password=(je to jedno)
+- Port=1883, Broker=mqtt.flespi.io, Topic=(zvolený topic), Interval=5
+
+- měřák odpojím od PC a zapojím do elektrárny
+- na PC nebo na mobilu si otevřu moji stránku: (stránka).pythonanywhere.com
+
+- jednou za 3 měsíce se přihlásím na www.pythonanywhere.com --> Web apps --> Run until 3 months from today
